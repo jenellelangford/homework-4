@@ -10,21 +10,44 @@
 <body>
   <!--HEADER/STARTING PAGE-->
   <header>
-  <h1>Parks and Rec Quiz</h1>
-    <p>Test your Parks and Recreation knowledge while racing aginst the clock.</p>
-    <button>Start Quiz</button>
+    <div id = "timer-container">
+      <p>Timer</p>
+      <h1 id = "time"></h1>
+    </div>
+    <div id = "score-container">
+      <p>Score</p>
+    </div>
   </header>
   
   <!--QUESTIONS BEGIN-->
-  <div class="container">
+  <div id = "container">
 
-
-
-
-
-
+    <h1>Parks and Rec Quiz</h1>
+    <p>Test your Parks and Recreation knowledge while racing aginst the clock.</p>
+    <button id="startbutton">Start Quiz</button>
 
   </div>
+
+  <div id = "questions">
+
+  </div>
+
+
+
+
+  <div id = "answers">
+      <div class = "answer" id="A"></div>
+      <div class = "answer" id="B"></div>
+      <div class = "answer" id="C"></div>
+  </div>
+
+  
+
+      <!-- 
+      <div id = "highscore-container">
+        <p>Type in your initals</p>
+      </div>
+      -->
 
   <script src ="../homework-4/script.js"></script>
 </body>
