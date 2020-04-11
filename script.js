@@ -152,6 +152,9 @@ function displayQuestionOne() {
   var choiceThree = document.createElement("button");
     choiceThree.textContent = myQuestions[0].answers.c;
     divChoice1_3.appendChild(choiceThree);
+
+  // Remove start button
+  startButton.remove();
 }
 
 // When the variable for the button is clicked, run the function to display question 2
