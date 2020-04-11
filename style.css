@@ -1,5 +1,7 @@
 h1 {
   text-align: center;
+  font-family: 'Bangers';
+  color: lightblue;
 }
 
 p {
@@ -16,4 +18,6 @@ p {
 
 #questions-container {
   text-align: center;
+  border: 3px solid lavender;
+  background-color: lightskyblue;
 }
