@@ -38,15 +38,20 @@ var divChoice5_1 = document.getElementById("answerFive-choiceOne");
 var divChoice5_2 = document.getElementById("answerFive-choiceTwo");
 var divChoice5_3 = document.getElementById("answerFive-choiceThree");
 
-
+// variable for time container
 var timerCountdown = document.getElementById("timer-container");
+
+// variable for the timer
 var timeSlot = document.getElementById("time");
+
+// variable for the score
 var score = document.getElementById("score-container");
-// var highscorePrompt = document.getElementById("highscore-container");
+
+// variables for inital score and times 
 var initalScore = 0;
 var intialTime = 60;
 
-// 3. Set all questions and answers in arrays
+// Set all questions and answers in arrays
 var myQuestions = [
 
   {
@@ -100,21 +105,25 @@ var myQuestions = [
   }
 ]
 
-// 4. Add event listener for the "Start quiz" button
+// Add event listener for the "Start quiz" button
 startButton.addEventListener("click", function(event) {
   event.preventDefault();
+
+  // Timer function and displaying question one begin upon clicking start button 
   startTimer();
   displayQuestionOne();
 });
 
-// 5. Create function for timer to begin when "Start quiz" button is clicked
+// Create function for timer to begin when "Start quiz" button is clicked
 function startTimer() {
+  // Set timer to start countdown from 60
   var timeLeft = intialTime;
 
   var timeInterval = setInterval(function() {
     timeSlot.textContent = timeLeft;
     timeLeft--;
 
+    // When time expires, alert appears 
     if (timeLeft === 0) {
       timeSlot.textContent = "";
       alert("TIME HAS EXPIRED!");
@@ -124,32 +133,41 @@ function startTimer() {
   }, 1000);
 }
 
+// This function displays question 1
 function displayQuestionOne() {
+  // Fill in question from array 
   questionsAll.textContent = myQuestions[0].question;
 
+  // Create a button for choice A
   var choiceOne = document.createElement("button");
     choiceOne.textContent = myQuestions[0].answers.a;
     divChoice1_1.appendChild(choiceOne);
 
+  // Create a button for choice B
   var choiceTwo = document.createElement("button");
     choiceTwo.textContent = myQuestions[0].answers.b;
     divChoice1_2.appendChild(choiceTwo);
 
+  // Create a button for choice C
   var choiceThree = document.createElement("button");
     choiceThree.textContent = myQuestions[0].answers.c;
     divChoice1_3.appendChild(choiceThree);
 }
 
+// When the variable for the button is clicked, run the function to display question 2
 divChoice1_1.addEventListener("click", displayQuestionTwo);
 divChoice1_2.addEventListener("click", displayQuestionTwo);
 divChoice1_3.addEventListener("click", displayQuestionTwo);
 
+// This function displays question 2
 function displayQuestionTwo() {
 
+  // Remove previously answer choices 
   divChoice1_1.remove();
   divChoice1_2.remove();
   divChoice1_3.remove();
  
+  // Calling second quesiton in array 
 questionsAll.textContent = myQuestions[1].question;
 
  var choiceOne = document.createElement("button");
@@ -168,6 +186,8 @@ questionsAll.textContent = myQuestions[1].question;
 divChoice2_1.addEventListener("click", displayQuestionThree);
 divChoice2_2.addEventListener("click", displayQuestionThree);
 divChoice2_3.addEventListener("click", displayQuestionThree);
+
+// The rest of the code is repeating itself. I just kept removing the old answers after clicked and appended new answer choices that lined up with the questions from the array. 
 
 function displayQuestionThree() {
 
@@ -262,33 +282,8 @@ divChoice5_1.addEventListener("click", quizOver);
 divChoice5_2.addEventListener("click", quizOver);
 divChoice5_3.addEventListener("click", quizOver);
 
+// Alert quiz is over with a prompt 
 function quizOver() {
-  alert("You just completed the Parks and Rec quiz by Jenelle Langford! Your score is xxxxx")
+  alert("You just completed the Parks and Rec quiz! Your score is xxxxx")
 
 }
-
-
-
-
-// event listener for answer selection
-  // on user answer selection, currentQuestion++, rerun displayCurrentQuestion function
-  // When the user answers the question correct, user will get message saying "Correct".
-  // If user answers the question wrong, user will get message saying "Wrong".
-  // Once message appears, the next question will display 
-  // Once message appears, the next question will display 
-
-
-
-
-
-// function displayCurrentQuestion
-// Function will display each individual question and display three different answer choices.
-// Create a button for each answer option. var question1 = document.createElement("button"); answers.appendChild("button");
-
-
-
-
-// 7. Call out all functions 
-
-
-
