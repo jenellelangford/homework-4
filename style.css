@@ -8,6 +8,16 @@ p {
   text-align: center;
 }
 
+#heading-container {
+  columns: 1;
+  float: left;
+}
+
+#score-container {
+  columns: 1;
+  float: right;
+}
+
 #startbutton {
   background-color: pink;
   border: 2px solid black; 

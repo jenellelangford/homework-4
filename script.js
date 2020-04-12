@@ -155,6 +155,7 @@ function displayQuestionOne() {
 
   // Remove start button
   startButton.remove();
+
 }
 
 // When the variable for the button is clicked, run the function to display question 2
